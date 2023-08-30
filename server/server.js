@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 //- /backendMessage route, user will see an object
-// http://localhost:/backendMessage
+// http://localhost:1965/backendMessage
 app.get('/backendMessage', (req, res) => {
     const myName = {name: "Whitney-Rene"};
     res.json(`${myName.name} is fetching from the BACKEND to the FRONTEND`);
