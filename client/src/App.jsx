@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import WeatherAppForm from './components/weatherAppForm';
+import WeatherAppCard from './components/weatherAppCard';
 
 function App() {
   //[message, the function that will change message]
@@ -22,6 +24,8 @@ function App() {
     <>
       <h1>Weather App</h1>
       {message}
+      <WeatherAppForm/>
+      <WeatherAppCard/>
     </>
   )
 }

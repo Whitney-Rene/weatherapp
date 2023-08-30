@@ -30,39 +30,3 @@ app.get('/backendMessage', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// app.get('/weather/:cityName', (req, res) => {
-//     console.log("Someone is visiting my weather site.");
-//     const {cityName} = req.params;
-//     console.log(req.params);
-//     //string literal ``
-//     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
-//     fetch(url) 
-//         .then(response => {
-//             // Code to handle the response
-//             // The response might contain data or information about the request status
-//             return response.json(); // For example, parsing response as JSON
-//         })
-//         .then(data => {
-//             // Code to handle the parsed data
-//             console.log(data);
-//             res.send(data);
-//         })
-//         .catch(error => {
-//             // Code to handle errors during the fetch request
-//             console.error('Error:', error);
-//         });
-// })
