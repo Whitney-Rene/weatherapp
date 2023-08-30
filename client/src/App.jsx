@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <h1>Weather App</h1>
-      <input id="city" type="text" placeholder='enter a city'></input>
     </>
   )
 }
