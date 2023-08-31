@@ -1,5 +1,7 @@
+import { useState } from "react";
 
 export default function WeatherAppCard () {
+
 
     return(
         <>
