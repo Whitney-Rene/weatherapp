@@ -42,7 +42,7 @@ app.get("/weather", (req, res) => {
       });
   });
 
-//this about adding a route to reroute users to the homepage
+//think about adding a route to reroute users to the homepage
 
 //this should be the last function of your server, it tells computer which port to use
 app.listen(PORT, () => {
