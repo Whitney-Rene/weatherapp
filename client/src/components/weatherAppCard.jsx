@@ -9,10 +9,10 @@ export default function WeatherAppCard({weather, test}) {
 
   return (
     <>
-      <h1>City: {weather.name}</h1>
-      <h2>Temperature: {weather.main.temp}</h2>
-      <h2>Feels Like: {weather.main.feels_like}</h2>
-      <p>Weather: {weather.weather[0].description}</p>
+      <h3>{weather.name}: </h3>
+      <h3>Temperature: {weather.main.temp}</h3>
+      <h3>Feels Like: {weather.main.feels_like}</h3>
+      <h3>Weather: {weather.weather[0].description}</h3>
     </>
   );
 

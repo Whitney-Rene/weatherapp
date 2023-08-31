@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <h1>Whitney-Rene's Weather App</h1>
+      <h2>Whitney-Rene's Weather App</h2>
       <WeatherAppForm />
       <div>{message}</div>
     </>

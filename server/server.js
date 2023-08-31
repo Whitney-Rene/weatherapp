@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 // http://localhost:1965/backendMessage
 app.get('/backendMessage', (req, res) => {
     const myName = {name: "Whitney-Rene"};
-    res.json(`${myName.name} is fetching from the BACKEND to the FRONTEND`);
+    res.json(`*${myName.name} is fetching from the BACKEND to the FRONTEND*`);
 })
 
 //http://localhost:1965/weather?city=durham
