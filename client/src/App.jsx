@@ -22,18 +22,12 @@ function App() {
     callBackEnd();
   }, []);
 
-  //fetch date from weather api
-  const fetchAPI = async () => {
-    const response = await fetch ('https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={APIkey}')
-
-  }
-
   return (
     <>
       <h1>Whitney-Rene's Weather App</h1>
       <WeatherAppForm/>
       <WeatherAppCard/>
-      {message}
+      <div>{message}</div>
     </>
   )
 }

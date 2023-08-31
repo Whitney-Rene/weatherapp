@@ -1,11 +1,12 @@
 import { useState } from "react";
+import WeatherAppForm from "./weatherAppForm";
 
-export default function WeatherAppCard () {
+export default function WeatherAppCard (props) {
 
 
     return(
         <>
-        <h1>This is my WeatherAppCard</h1>
+        <h1>WeatherCard</h1>
         </>
     )
 }

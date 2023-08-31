@@ -14,11 +14,15 @@ const getCity = (event) => {
 }
 
 const getWeather = (event) => {
+    event.preventDefault();
+
     fetch(`${backendApiUrl}/weather?city=${city}`)
     .then(response => response.json())
     .then(data => {
-     console.log("Weather data:", data);
-     setWeatherData(data);
+    console.log(`City: ${data.name}`); //name
+    console.log(`Temperature: ${data.main.temp}`); //temp
+    console.log(`Weather: ${data.weather[0].description}`); //weather
+    setWeatherData(data);
   // Now you can do something with the weather data, such as displaying it on the frontend
 })
 .catch(error => {
@@ -28,9 +32,11 @@ const getWeather = (event) => {
 
     return (
         <>
+        <form>
         <input type="text" placeholder="Enter city name" onChange={getCity}></input>
+        </form>
         <button onClick={getWeather}>Submit</button>
-        <WeatherAppCard weather={weatherData}/>
+        {/* <div>{weatherData}</div> */}
         </>
     );
 }
