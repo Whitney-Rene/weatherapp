@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
@@ -8,7 +9,6 @@ import WeatherAppCard from './components/weatherAppCard';
 function App() {
   //[message, the function that will change message]
   const [message, setMessage] = useState('');
-  //create a state city
 
   //backend to frontend
   const callBackEnd = async () => {
@@ -25,8 +25,8 @@ function App() {
   return (
     <>
       <h1>Whitney-Rene's Weather App</h1>
-      <WeatherAppForm/>
-      <WeatherAppCard/>
+      <WeatherAppForm />
+      <WeatherAppCard />
       <div>{message}</div>
     </>
   )
