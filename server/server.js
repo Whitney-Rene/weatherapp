@@ -1,12 +1,10 @@
-//app framework
 import express from 'express';
-//import these before the creation of the "app"
-import cors from 'cors'; //makes sure nothing else in comp is using this port #
+import cors from 'cors';
 import fetch from 'node-fetch';
 import 'dotenv/config';
 
-const app = express() //holds a new express app, each time it is called
-app.use(cors()); //Middleware
+const app = express() 
+app.use(cors()); 
 app.use(express.json());
 
 const PORT = process.env.PORT || 2023
@@ -28,6 +26,7 @@ app.get('/backendMessage', (req, res) => {
 })
 
 //http://localhost:1965/weather?city=durham
+//I am acutlly using it on line 31
 app.get("/weather", (req, res) => {
     const APIkey = process.env.OPEN_WEATHER_MAP_API_KEY;
     const city = req.query.city;
@@ -42,6 +41,8 @@ app.get("/weather", (req, res) => {
         res.status(500).json({ error: "Error fetching weather data" });
       });
   });
+
+//this about adding a route to reroute users to the homepage
 
 //this should be the last function of your server, it tells computer which port to use
 app.listen(PORT, () => {
