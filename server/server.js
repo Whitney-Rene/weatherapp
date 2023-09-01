@@ -26,7 +26,6 @@ app.get('/backendMessage', (req, res) => {
 })
 
 //http://localhost:1965/weather?city=durham
-//I am acutlly using it on line 31
 app.get("/weather", (req, res) => {
     const APIkey = process.env.OPEN_WEATHER_MAP_API_KEY;
     const city = req.query.city;
