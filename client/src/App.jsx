@@ -17,10 +17,12 @@ function App() {
     setMessage(data);
   }
   
+  //calls the callBackEnd function, when page loads, I think?
   useEffect(() => {
     callBackEnd();
   }, []);
 
+  //render to page
   return (
     <>
       <h2>Whitney-Rene's Weather App</h2>
