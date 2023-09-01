@@ -4,6 +4,8 @@ import WeatherAppForm from "./weatherAppForm";
 //destructuring props object {weather, test} out of the props object
 export default function WeatherAppCard({weather, test}) {
 
+console.log(weather);
+
   //grab props from weatherAppForm-data object, gives me the value of the key
   return (
     <>

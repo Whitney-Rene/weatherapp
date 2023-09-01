@@ -30,14 +30,25 @@ app.get("/weather", (req, res) => {
     const APIkey = process.env.OPEN_WEATHER_MAP_API_KEY;
     const city = req.query.city;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json()})
       .then(data => {
-        console.log(data);
+        // console.log(data);
         res.json(data);
       })
       .catch(error => {
+        // console.log('#1', typeof error.message);
         console.error("Error fetching weather data:", error);
-        res.status(500).json({ error: "Error fetching weather data" });
+        if (error.message.includes('404')) {
+          // console.log("inside 404")
+          res.status(404).json({ error: "City not found" });
+        } else {
+          // console.log('inside 500')
+          res.status(500).json({ error: "Error fetching weather data" });
+        }
       });
   });
 

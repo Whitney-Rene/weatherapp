@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherAppCard from "./weatherAppCard";
+import './WeatherAppForm.css';
 
 //globla variable
 const backendApiUrl = 'http://localhost:1965';
@@ -24,15 +25,23 @@ export default function WeatherAppForm () {
       
     setErrorMessage('');
 
-    //call to api, sends back a data in json and catches errors 
+    //call to api, sends back data in json and catches errors 
     fetch(`${backendApiUrl}/weather?city=${city}`)
-      .then(response => response.json())
+      .then(response => {
+        console.log(response);
+        if(!response.ok){
+          throw new Error('City not found.')
+        }
+        return response.json()
+      })
       .then(data => {
+        console.log('inside data');
         setWeatherData(data);
       })
       .catch(error => {
+        console.log("inside catch")
         console.error('Error fetching weather data:', error);
-        setErrorMessage('City not found. Please check the city name and try again.');
+        setErrorMessage('City not found. Please check the spelling of the city name. Did you enter something?');
       })
   };
 
@@ -45,7 +54,7 @@ export default function WeatherAppForm () {
       <div>
           <button onClick={getWeather}>Submit</button>
       </div>
-      <div>{errorMessage}</div>
+      <div className="error-message">{errorMessage}</div>
       {weatherData === "" ? null : <WeatherAppCard weather={weatherData} test="This is a test."/>}
       
     </>

@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <h2>Whitney-Rene's Weather App</h2>
-      <WeatherAppForm />
+      <div> <WeatherAppForm /> </div>
       <div>{message}</div>
     </>
   )
