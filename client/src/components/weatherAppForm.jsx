@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import WeatherAppCard from "./weatherAppCard";
 import './WeatherAppForm.css';
 
-//globla variable
+//global variable
 const backendApiUrl = 'http://localhost:1965';
 
 export default function WeatherAppForm () {
@@ -35,7 +35,6 @@ export default function WeatherAppForm () {
         return response.json()
       })
       .then(data => {
-        console.log('inside data');
         setWeatherData(data);
       })
       .catch(error => {
