@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": -122.143,
+        "lat": 37.4419
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 302.49,
+        "feels_like": 302.64,
+        "temp_min": 297.07,
+        "temp_max": 307.45,
+        "pressure": 1014,
+        "humidity": 45
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.54,
+        "deg": 10
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1697743408,
+    "sys": {
+        "type": 2,
+        "id": 2018441,
+        "country": "US",
+        "sunrise": 1697725206,
+        "sunset": 1697765200
+    },
+    "timezone": -25200,
+    "id": 5380748,
+    "name": "Palo Alto",
+    "cod": 200
+}

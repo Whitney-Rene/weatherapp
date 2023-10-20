@@ -1,4 +1,7 @@
+//third party libraries
 import React, { useState } from "react";
+
+//./ imports
 import WeatherAppCard from "./weatherAppCard";
 import './WeatherAppForm.css';
 
@@ -6,6 +9,7 @@ import './WeatherAppForm.css';
 const backendApiUrl = 'http://localhost:1965';
 
 export default function WeatherAppForm () {
+  
   //states
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState('');
@@ -28,13 +32,13 @@ export default function WeatherAppForm () {
     //call to api, sends back data in json and catches errors 
     fetch(`${backendApiUrl}/weather?city=${city}`)
       .then(response => {
-        console.log(response);
         if(!response.ok){
           throw new Error('City not found.')
         }
         return response.json()
       })
       .then(data => {
+        console.log(data);
         setWeatherData(data);
       })
       .catch(error => {
